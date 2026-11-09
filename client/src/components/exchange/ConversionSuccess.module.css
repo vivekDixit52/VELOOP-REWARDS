@@ -1,0 +1,20 @@
+.success { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.visual { position: relative; display: grid; place-items: center; width: 100%; height: 150px; margin-bottom: 14px; }
+.coins { width: 190px; height: auto; filter: drop-shadow(0 18px 28px rgba(245, 196, 81, 0.35)); animation: rise 0.7s cubic-bezier(0.2, 1.2, 0.4, 1) both; }
+.badge { position: absolute; bottom: -6px; left: 50%; display: grid; place-items: center; width: 46px; height: 46px; margin-left: -23px; border-radius: 50%; color: #052e1d; background: linear-gradient(135deg, #6ee7b7, #10b981); border: 3px solid #1f2340; box-shadow: 0 10px 22px -8px rgba(16, 185, 129, 0.8); animation: pop 0.5s 0.3s cubic-bezier(0.2, 1.5, 0.4, 1) both; }
+.spark { position: absolute; top: 50%; left: 50%; width: 7px; height: 7px; margin: -3.5px; border-radius: 2px; background: var(--gold); opacity: 0; animation: burst 1s 0.2s ease-out both; }
+.spark:nth-child(even) { background: #c4b5fd; }
+
+.title { margin: 0; font-size: 1.5rem; }
+.gain { margin: 8px 0 0; font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; background: linear-gradient(180deg, #fff3c8, #f5c451); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.line { margin: 4px 0 0; color: var(--muted); font-size: 0.92rem; }
+.balances { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; margin: 20px 0; }
+.balances div { padding: 12px; border-radius: 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); }
+.balances dt { font-size: 0.74rem; color: var(--muted); }
+.balances dd { margin: 2px 0 0; font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; }
+.continue { width: 100%; padding: 14px; border: 0; border-radius: 15px; font-weight: 700; color: #231700; cursor: pointer; background: linear-gradient(135deg, #ffe9ac, #f5c451 55%, #e6a21f); }
+.continue:hover { filter: brightness(1.07); }
+
+@keyframes rise { from { transform: translateY(30px) scale(0.8); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes pop { from { transform: scale(0); } to { transform: scale(1); } }
+@keyframes burst { 0% { opacity: 1; transform: rotate(var(--angle)) translateY(-40px) scale(1); } 100% { opacity: 0; transform: rotate(var(--angle)) translateY(-90px) scale(0.3); } }

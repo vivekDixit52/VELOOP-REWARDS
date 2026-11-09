@@ -1,0 +1,9 @@
+.wrapper { position: relative; display: inline-flex; vertical-align: middle; }
+.trigger { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; padding: 0; border-radius: 50%; color: var(--muted); background: rgba(255, 255, 255, 0.06); border: 1px solid var(--border); cursor: pointer; transition: color 0.2s, background 0.2s, border-color 0.2s; }
+.trigger:hover, .trigger[aria-expanded='true'] { color: var(--gold-light); background: rgba(245, 196, 81, 0.14); border-color: rgba(245, 196, 81, 0.4); }
+.popover { position: absolute; top: calc(100% + 10px); z-index: 60; display: grid; gap: 4px; width: min(270px, calc(100vw - 48px)); padding: 14px 16px; text-align: left; font-family: var(--font-body); font-weight: 400; border-radius: 14px; background: #2b2f4d; border: 1px solid var(--border-strong); box-shadow: 0 18px 40px rgba(5, 6, 14, 0.55); }
+.popover[data-align='start'] { left: -8px; }
+.popover[data-align='end'] { right: -8px; }
+.popover[data-align='center'] { left: 50%; transform: translateX(-50%); }
+.title { font-size: 0.85rem; color: var(--text); font-family: var(--font-display); font-weight: 600; }
+.text { font-size: 0.82rem; line-height: 1.5; color: var(--muted); }

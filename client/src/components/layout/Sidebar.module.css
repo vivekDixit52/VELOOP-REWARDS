@@ -1,0 +1,24 @@
+.sidebar { width: 264px; flex: 0 0 264px; position: sticky; top: 0; height: 100vh; height: 100dvh; display: flex; flex-direction: column; gap: 22px; padding: 22px 14px; overflow-y: auto; z-index: 1040; background: linear-gradient(180deg, #1a1c32 0%, #131525 100%); border-right: 1px solid var(--border); }
+.brandLink { padding: 0 10px; text-decoration: none; border-radius: 12px; }
+.nav { flex: 1; }
+.nav ul { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.link { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-radius: 14px; color: var(--muted); font-size: 0.92rem; font-weight: 500; text-decoration: none; border: 1px solid transparent; transition: background 0.2s, color 0.2s; }
+.link:hover { color: var(--text); background: rgba(255, 255, 255, 0.05); }
+.active, .active:hover { color: var(--text); font-weight: 600; background: linear-gradient(90deg, rgba(139, 92, 246, 0.3), rgba(139, 92, 246, 0.07)); border-color: rgba(139, 92, 246, 0.5); }
+.active svg { color: var(--violet-light); }
+
+.earn { position: relative; display: grid; gap: 10px; padding: 16px; border-radius: 20px; overflow: hidden; background: radial-gradient(220px 120px at 80% 0%, rgba(139, 92, 246, 0.3), transparent 70%), rgba(255, 255, 255, 0.03); border: 1px solid var(--border); }
+.earnTitle { margin: 0; font-size: 0.98rem; font-weight: 600; }
+.chest { width: 100%; height: auto; }
+
+.profile { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 16px; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border); }
+.avatar { display: grid; place-items: center; flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%; font-family: var(--font-display); font-weight: 700; background: linear-gradient(135deg, #7c3aed, #4c1d95); border: 2px solid rgba(196, 181, 253, 0.5); }
+.who { min-width: 0; }
+.name { margin: 0; overflow: hidden; font-size: 0.9rem; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+.meta { margin: 3px 0 0; font-size: 0.72rem; color: var(--muted); }
+.level { margin-right: 6px; padding: 1px 8px; border-radius: 999px; color: var(--violet-light); background: rgba(139, 92, 246, 0.2); font-weight: 700; }
+
+@media (max-width: 991.98px) {
+  .sidebar { position: fixed; left: 0; top: 0; transform: translateX(-100%); transition: transform 0.3s ease; box-shadow: 24px 0 60px rgba(0, 0, 0, 0.5); }
+  .sidebar[data-open='true'] { transform: none; }
+}

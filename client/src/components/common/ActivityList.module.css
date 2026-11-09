@@ -1,0 +1,14 @@
+.list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.item { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 12px 14px; border-radius: 16px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); }
+.icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; background: rgba(255, 255, 255, 0.05); }
+.body { min-width: 0; }
+.title { margin: 0; overflow: hidden; font-size: 0.92rem; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+.when { font-size: 0.76rem; color: var(--muted); }
+.end { display: grid; justify-items: end; gap: 4px; }
+.amounts { display: inline-flex; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.gold { color: var(--gold-light); }
+.plus { color: var(--success); }
+@media (max-width: 575.98px) {
+  .item { grid-template-columns: 40px minmax(0, 1fr); }
+  .end { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; }
+}

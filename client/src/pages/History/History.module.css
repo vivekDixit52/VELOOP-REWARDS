@@ -1,0 +1,2 @@
+.list { margin-top: 20px; min-height: 120px; }
+.pager { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 20px; font-size: 0.86rem; color: var(--muted); }

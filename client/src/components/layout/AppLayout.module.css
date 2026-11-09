@@ -1,0 +1,5 @@
+.shell { display: flex; min-height: 100vh; background: var(--bg); }
+.body { flex: 1; min-width: 0; background: radial-gradient(900px 520px at 12% -5%, rgba(139, 92, 246, 0.13), transparent 60%), radial-gradient(800px 520px at 100% 100%, rgba(245, 196, 81, 0.06), transparent 60%); }
+.main { padding: clamp(16px, 2.6vw, 36px) clamp(16px, 3vw, 40px) 64px; }
+.content { width: 100%; max-width: 1480px; margin-inline: auto; }
+.overlay { position: fixed; inset: 0; z-index: 1030; background: rgba(6, 7, 16, 0.65); backdrop-filter: blur(3px); }

@@ -1,0 +1,8 @@
+.state { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 40px 20px; text-align: center; border-radius: 26px; background: var(--surface); border: 1px dashed var(--border-strong); }
+.page { min-height: 60vh; justify-content: center; }
+.dim { width: 180px; height: auto; margin-bottom: 8px; opacity: 0.5; filter: grayscale(0.5); }
+.title { margin: 0; font-size: 1.15rem; font-weight: 600; }
+.text { margin: 0; max-width: 40ch; font-size: 0.9rem; color: var(--muted); }
+.errorIcon { display: grid; place-items: center; width: 68px; height: 68px; margin-bottom: 8px; border-radius: 50%; color: var(--warning); background: rgba(251, 191, 36, 0.12); border: 1px solid rgba(251, 191, 36, 0.4); }
+.retry { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 13px 28px; border: 0; border-radius: 15px; font-weight: 700; color: #231700; cursor: pointer; background: linear-gradient(135deg, #ffe9ac, #f5c451 55%, #e6a21f); }
+.retry:hover { filter: brightness(1.07); }

@@ -1,0 +1,6 @@
+.panel { overflow: hidden; }
+.list { position: relative; z-index: 1; display: grid; gap: 12px; margin: 0; padding: 0 90px 0 0; list-style: none; }
+.list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.86rem; line-height: 1.5; color: var(--muted); }
+.list svg { flex-shrink: 0; margin-top: 1px; color: var(--violet-light); }
+.shield { position: absolute; right: -6px; bottom: 6px; width: 120px; height: auto; opacity: 0.95; filter: drop-shadow(0 12px 22px rgba(139, 92, 246, 0.5)); pointer-events: none; }
+@media (max-width: 420px) { .list { padding-right: 0; } .shield { opacity: 0.18; } }

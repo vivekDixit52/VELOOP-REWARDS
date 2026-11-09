@@ -1,0 +1,5 @@
+.list { display: grid; gap: 16px; margin: 0; }
+.list > div { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px; align-items: center; }
+.icon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); }
+.list dt { font-family: var(--font-display); font-weight: 600; }
+.list dd { margin: 3px 0 0; font-size: 0.82rem; line-height: 1.55; color: var(--muted); }

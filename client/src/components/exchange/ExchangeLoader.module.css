@@ -1,0 +1,12 @@
+.loader { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 66vh; padding: 24px; text-align: center; }
+.full { min-height: 100vh; background: var(--bg); }
+.stage { position: relative; width: 150px; height: 150px; margin-bottom: 28px; }
+.core { position: absolute; inset: 36px; border-radius: 50%; background: radial-gradient(circle, rgba(245, 196, 81, 0.6), rgba(139, 92, 246, 0.3) 60%, transparent 72%); animation: breathe 2.4s ease-in-out infinite; }
+.orbit { position: absolute; inset: 0; border-radius: 50%; border: 1px dashed rgba(245, 196, 81, 0.35); animation: spin 3.2s linear infinite; }
+.gem, .coin { position: absolute; left: 50%; width: 54px; height: auto; margin-left: -27px; animation: spin 3.2s linear infinite reverse; }
+.gem { top: -24px; }
+.coin { bottom: -24px; }
+.title { margin: 0; font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
+.text { margin: 6px 0 0; font-size: 0.88rem; color: var(--muted); }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes breathe { 0%, 100% { transform: scale(0.85); opacity: 0.6; } 50% { transform: scale(1.1); opacity: 1; } }

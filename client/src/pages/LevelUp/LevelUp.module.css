@@ -1,0 +1,25 @@
+.level { position: relative; display: flex; align-items: center; gap: 24px; padding: 26px 30px; overflow: hidden; border-radius: 28px; background: radial-gradient(480px 240px at 100% 50%, rgba(139, 92, 246, 0.35), transparent 70%), linear-gradient(145deg, #231f48, #171a30); border: 1px solid rgba(255, 255, 255, 0.12); }
+.badge { display: grid; place-items: center; flex-shrink: 0; width: 96px; height: 96px; border-radius: 28px; background: linear-gradient(145deg, #8b5cf6, #4c1d95); box-shadow: 0 16px 34px -14px rgba(139, 92, 246, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.3); }
+.badge span { font-size: 0.72rem; margin-bottom: -10px; color: #e9ddff; }
+.badge strong { font-family: var(--font-display); font-size: 2.6rem; }
+.levelInfo { position: relative; z-index: 1; flex: 1; display: grid; gap: 10px; max-width: 520px; }
+.levelRow { display: flex; justify-content: space-between; font-size: 0.86rem; font-weight: 600; color: var(--muted); }
+.levelGem { position: absolute; right: 24px; top: 50%; width: auto; max-height: 130px; transform: translateY(-50%); opacity: 0.95; filter: drop-shadow(0 16px 26px rgba(139, 92, 246, 0.6)); pointer-events: none; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 18px; }
+.task { display: grid; grid-template-columns: 84px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 22px; background: linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.012)), var(--surface); border: 1px solid var(--border); }
+.taskGem { width: auto; max-height: 64px; max-width: 84px; object-fit: contain; filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.4)); }
+.inviteIcon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 20px; color: var(--violet-light); background: rgba(139, 92, 246, 0.18); justify-self: center; }
+.taskBody h3 { margin: 0; font-size: 0.98rem; font-weight: 600; }
+.taskBody p { margin: 2px 0 0; font-size: 0.8rem; color: var(--muted); }
+.taskBody .reward { margin-top: 6px; font-weight: 700; color: var(--gold-light); }
+.done, .wait { display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; font-weight: 700; white-space: nowrap; }
+.done { color: var(--success); }
+.wait { color: var(--muted); }
+@media (max-width: 575.98px) {
+  .level { flex-wrap: wrap; padding: 20px; }
+  .levelGem { display: none; }
+  .levelInfo { flex-basis: 100%; }
+  .task { grid-template-columns: 64px minmax(0, 1fr); }
+  .task > :last-child { grid-column: 1 / -1; justify-self: stretch; text-align: center; justify-content: center; }
+}
